@@ -4,15 +4,18 @@ import Building from "../img/building.svg";
 class HeaderProgress extends Component {
   renderSquare(square) {
     return (
-      <div id={"square-" + square} className="square-progress">
-        <img src={Building} alt=""></img>
-        <p>Teste</p>
+      <div className="progress-group">
+        <div id={"square-" + square} className="square-progress">
+          <img src={Building} alt=""></img>
+        </div>
+        <p>ITEM 1</p>
+        <p>CONCLUIDO</p>
       </div>
     );
   }
   render() {
     let squares = [];
-    for (let i = 0; i <= 9; i++) {
+    for (let i = 1; i <= 9; i++) {
       squares.push(i);
     }
     return (

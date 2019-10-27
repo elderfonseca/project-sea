@@ -1,33 +1,43 @@
 .ant-layout .ant-layout-header {
   display: flex;
+  justify-content: space-around;
   background-color: $white;
   position: absolute;
   height: 159px;
+  width: 1252px;
   left: 90px;
   top: 33px;
+  padding: 0;
+  padding-top: 22px;
   box-shadow: 0 2px 23px $black-shadow;
   border-radius: 20px;
-  padding: 25px 24px 29px 29px;
 
-  .square-progress {
+  .progress-group {
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 65px;
-    height: 65px;
-    background-color: $fountain-blue;
-    border-radius: 20px;
-    border: 1px solid $blue-ribbon;
-    border-radius: 20px;
-    margin-right: 55px;
+    flex-direction: column;
     z-index: 1;
 
-    &#square-9 {
-      margin-right: 0;
+    .square-progress {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 65px;
+      height: 65px;
+      margin-bottom: 15px;
+      background-color: $fountain-blue;
+      border-radius: 20px;
+      border: 1px solid $blue-ribbon;
+      box-sizing: border-box;
+      box-shadow: 0 4px 4px $black-shadow-squares;
     }
 
     p {
-      font-family: "Ubuntu Regular";
+      color: $fountain-blue;
+      font-weight: bold;
+      line-height: 0;
+      text-align: center;
+      padding: 5px 0;
     }
   }
 

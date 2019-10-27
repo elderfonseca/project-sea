@@ -1,8 +1,12 @@
 @import "./fonts";
 @import "./variables";
 
-body .ant-layout {
-  background-color: $mercury;
+body {
+  font-family: "Ubuntu Regular";
+
+  .ant-layout {
+    background-color: $mercury;
+  }
 }
 
 @import "./menu-aside.scss";
