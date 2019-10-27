@@ -3,7 +3,7 @@
   border-radius: 0 20px 20px 0;
   max-width: 57px !important;
   min-width: 0 !important;
-  min-height: 768px;
+  min-height: 700px;
   margin-right: 34px;
 
   .white-bar {
@@ -13,5 +13,52 @@
     width: 100%;
     left: 0;
     top: 50px;
+  }
+
+  .side-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 225px;
+    width: 100%;
+    height: 325px;
+
+    .item-menu {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      background-color: $white;
+      border-radius: 10px;
+
+      img {
+        height: 20px;
+        width: auto;
+      }
+
+      &.notification {
+        position: absolute;
+        width: 13.67px;
+        height: 14.02px;
+        left: 35px;
+        top: 200px;
+        border-radius: 4px;
+
+        img {
+          height: 10px;
+        }
+      }
+
+      .item-selected {
+        background-color: $white;
+        height: 32px;
+        width: 5px;
+        position: absolute;
+        left: 0;
+      }
+    }
   }
 }
