@@ -1,0 +1,43 @@
+.ant-layout .ant-layout-header {
+  display: flex;
+  background-color: $white;
+  position: absolute;
+  height: 159px;
+  left: 90px;
+  top: 33px;
+  box-shadow: 0 2px 23px $black-shadow;
+  border-radius: 20px;
+  padding: 25px 24px 29px 29px;
+
+  .square-progress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    background-color: $fountain-blue;
+    border-radius: 20px;
+    border: 1px solid $blue-ribbon;
+    border-radius: 20px;
+    margin-right: 55px;
+    z-index: 1;
+
+    &#square-9 {
+      margin-right: 0;
+    }
+
+    p {
+      font-family: "Ubuntu Regular";
+    }
+  }
+
+  .horizontal-line {
+    position: absolute;
+    width: 90%;
+    height: 1px;
+    border-top: 3px dashed $fountain-blue;
+    top: 57px;
+    left: 69px;
+    z-index: 0;
+  }
+}

@@ -1,0 +1,17 @@
+.ant-layout .ant-layout-sider {
+  background-color: $fountain-blue;
+  border-radius: 0 20px 20px 0;
+  max-width: 57px !important;
+  min-width: 0 !important;
+  min-height: 768px;
+  margin-right: 34px;
+
+  .white-bar {
+    background-color: $white;
+    position: absolute;
+    height: 41px;
+    width: 100%;
+    left: 0;
+    top: 50px;
+  }
+}

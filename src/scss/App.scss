@@ -1,0 +1,9 @@
+@import "./fonts";
+@import "./variables";
+
+body .ant-layout {
+  background-color: $mercury;
+}
+
+@import "./menu-aside.scss";
+@import "./header-progress.scss";
