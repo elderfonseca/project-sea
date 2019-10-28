@@ -6,8 +6,15 @@ body {
 
   .ant-layout {
     background-color: $mercury;
+
+    .ant-layout-content {
+      display: flex;
+      position: absolute;
+      top: 225px;
+    }
   }
 }
 
 @import "./menu-aside.scss";
 @import "./header-progress.scss";
+@import "./employee-text.scss";

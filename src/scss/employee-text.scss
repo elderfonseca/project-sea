@@ -1,0 +1,20 @@
+.employee-text {
+  background-color: $white;
+  width: 447px;
+  height: 484px;
+  border-radius: 20px;
+
+  p {
+    font-size: 16px;
+    line-height: 20px;
+    color: $dove-gray;
+    padding: 26px 23px;
+    text-align: justify;
+  }
+
+  .employee-img {
+    position: absolute;
+    bottom: -59px;
+    left: 23px;
+  }
+}

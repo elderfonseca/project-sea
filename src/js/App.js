@@ -3,8 +3,9 @@ import { Layout } from "antd";
 import "../scss/App.scss";
 import MenuAside from "../components/menu-aside";
 import HeaderProgress from "../components/header-progress";
+import EmployeeText from "../components/employee-text";
 
-const { Header, Footer, Sider, Content } = Layout;
+const { Header, Sider, Content } = Layout;
 
 class App extends Component {
   render() {
@@ -17,8 +18,9 @@ class App extends Component {
           <Header>
             <HeaderProgress />
           </Header>
-          <Content></Content>
-          <Footer></Footer>
+          <Content>
+            <EmployeeText />
+          </Content>
         </Layout>
       </Layout>
     );
