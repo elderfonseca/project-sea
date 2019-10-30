@@ -9,7 +9,7 @@ class HeaderProgress extends Component {
           <img src={Building} alt=""></img>
         </div>
         <p>ITEM 1</p>
-        <p>CONCLUIDO</p>
+        <p class="item-completed">CONCLUIDO</p>
       </div>
     );
   }

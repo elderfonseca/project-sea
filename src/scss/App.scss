@@ -3,9 +3,10 @@
 
 body {
   font-family: "Ubuntu Regular";
+  background-color: $mercury;
 
   .ant-layout {
-    background-color: $mercury;
+    background-color: transparent;
 
     .ant-layout-content {
       display: flex;

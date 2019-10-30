@@ -51,4 +51,133 @@
       top: 183px;
     }
   }
+
+  .list-itens {
+    padding: 0 11px 14px 19px;
+    margin: 0;
+
+    li {
+      background-color: $aqua-haze;
+      display: flex;
+      justify-content: space-between;
+      height: 84px;
+      border-radius: 10px;
+      margin-bottom: 14px;
+      overflow: hidden;
+
+      .personal-data {
+        display: flex;
+        flex-wrap: wrap;
+        width: 95%;
+        padding: 6px 0 10px 15px;
+
+        .name-employer {
+          font-size: 24px;
+          color: $dove-gray;
+          margin: 0;
+        }
+
+        .cpf-employer,
+        .activity,
+        .office {
+          color: white;
+          background-color: $fountain-blue;
+          line-height: 25px;
+          height: 24px;
+          border-radius: 36px;
+          padding: 0 17px;
+          margin-right: 12px;
+          margin-bottom: 0;
+        }
+
+        .break {
+          flex-basis: 100%;
+          height: 0;
+        }
+      }
+
+      .button-item {
+        background-color: $fountain-blue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 5%;
+
+        p {
+          color: $white;
+          font-size: 26px;
+          height: 12px;
+          margin: 0;
+          line-height: 0;
+        }
+      }
+    }
+  }
+
+  .step-completed {
+    display: flex;
+    justify-content: flex-end;
+
+    .label-completed {
+      color: $mine-shaft;
+      padding-right: 12px;
+    }
+
+    .switch {
+      position: absolute;
+      margin-left: -9999px;
+      visibility: hidden;
+    }
+
+    .switch + label {
+      display: block;
+      position: relative;
+      cursor: pointer;
+      outline: none;
+      user-select: none;
+    }
+
+    .switch-shadow + label {
+      padding: 2px;
+      width: 52px;
+      height: 20px;
+      background-color: $alto;
+      border-radius: 11px;
+      margin-right: 11px;
+    }
+
+    .switch-shadow + label:before,
+    .switch-shadow + label:after {
+      display: block;
+      position: absolute;
+      top: 1px;
+      left: 1px;
+      bottom: 1px;
+      content: "";
+    }
+
+    .switch-shadow + label:before {
+      padding-left: 21px;
+      border-radius: 11px;
+      content: "Não";
+    }
+
+    .switch-shadow + label:after {
+      width: 18px;
+      background-color: $fountain-blue;
+      border-radius: 100%;
+      box-shadow: 0 2px 5px $black-shadow-switch;
+      transition: all 0.4s;
+    }
+
+    .switch-shadow:checked + label:after {
+      transform: translateX(32px);
+    }
+
+    .switch-shadow:checked + label:before {
+      content: "Sim";
+      padding-left: 3px;
+    }
+  }
 }
