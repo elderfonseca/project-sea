@@ -3,24 +3,53 @@ import { Button } from "antd";
 
 class ListEmployees extends Component {
   state = {
-    api: []
+    api: [],
+    showAll: true,
+    itemAll: []
   };
 
+  // JSON Request
   componentDidMount() {
     fetch("http://localhost:8000/funcionarios")
       .then(res => res.json())
       .then(data => {
         this.setState({ api: data });
+        this.setState({ itemAll: data });
         console.log(this.state);
       })
       .catch(console.log);
   }
 
-  onlyActives() {
-    let activesArray = this.state.api.filter(active => {
-      return this.state.api.isActive === 1;
+  // Function to assemble list items
+  showItem(employer) {
+    if (this.state.showAll) {
+      return (
+        <li>
+          <div className="personal-data">
+            <h3 className="name-employer">{employer.name}</h3>
+            <div className="break"></div>
+            <p className="cpf-employer">{employer.cpfEmployer}</p>
+            <p className="activity">{employer.activity}</p>
+            <p className="office">{employer.office}</p>
+          </div>
+          <div className="button-item">
+            <p>...</p>
+          </div>
+        </li>
+      );
+    }
+  }
+
+  // Display only active items
+  showActives() {
+    this.setState({
+      itemAll: this.state.api.filter(employer => employer.isActive === 1)
     });
-    console.log(activesArray);
+  }
+
+  // Display all itens
+  showAllItem() {
+    this.setState({ itemAll: this.state.api });
   }
 
   render() {
@@ -35,27 +64,24 @@ class ListEmployees extends Component {
               <Button className="add-employees" block>
                 + Adicionar Funcionário
               </Button>
-              <Button className="only-actives" onClick={this.onlyActives}>
+              <Button
+                className="only-actives"
+                onClick={this.showActives.bind(this)}
+              >
                 Ver Apenas ativos
               </Button>
-              <Button className="clean-filters">Limpar Filtros</Button>
-              <p>Ativos 2/{this.state.api.length}</p>
+              <Button
+                className="clean-filters"
+                onClick={this.showAllItem.bind(this)}
+              >
+                Limpar Filtros
+              </Button>
+              <p>
+                Ativos {this.state.itemAll.length}/{this.state.api.length}
+              </p>
             </div>
             <ul className="list-itens">
-              {this.state.api.map(employer => (
-                <li>
-                  <div className="personal-data">
-                    <h3 className="name-employer">{employer.name}</h3>
-                    <div className="break"></div>
-                    <p className="cpf-employer">{employer.cpfEmployer}</p>
-                    <p className="activity">{employer.activity}</p>
-                    <p className="office">{employer.office}</p>
-                  </div>
-                  <div className="button-item">
-                    <p>...</p>
-                  </div>
-                </li>
-              ))}
+              {this.state.itemAll.map(employer => this.showItem(employer))}
             </ul>
             <div className="step-completed">
               <div class="label-completed">
