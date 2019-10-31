@@ -1,0 +1,22 @@
+@import "./fonts";
+@import "./variables";
+
+body {
+  font-family: "Ubuntu Regular";
+  background-color: $mercury;
+
+  .ant-layout {
+    background-color: transparent;
+
+    .ant-layout-content {
+      display: flex;
+      position: absolute;
+      top: 225px;
+    }
+  }
+}
+
+@import "./menu-aside.scss";
+@import "./header-progress.scss";
+@import "./employee-text.scss";
+@import "./list-employees.scss";
