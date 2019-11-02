@@ -1,0 +1,20 @@
+{
+    "funcionarios": [
+        {
+            "id": 1,
+            "name": "Daniel Alves da Silva",
+            "cpfEmployer": "000.000.000-99",
+            "activity": "Ativ 00",
+            "office": "Cargo 1",
+            "isActive": 0
+        },
+        {
+            "id": 2,
+            "name": "Giselle Torres Lopes",
+            "cpfEmployer": "000.000.000-88",
+            "activity": "Ativ 00",
+            "office": "Cargo 2",
+            "isActive": 1
+        }
+    ]
+}
