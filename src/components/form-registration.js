@@ -9,7 +9,7 @@ const FormEmployees = props => {
       <Form layout="vertical" onSubmit={handleSubmit}>
         <div className="active-group">
           <div className="label-active-employer">
-            <p>A etapa está concluída?</p>
+            <p>O trabalhador está ativo ou inativo?</p>
           </div>
           <div class="switch-active-employer">
             <input
@@ -36,10 +36,22 @@ const FormEmployees = props => {
               <label>Sexo</label>
               <div>
                 <label>
-                  <Field name="sex" type="radio" value="masculino" /> Masculino
+                  <Field
+                    name="sex"
+                    component="input"
+                    type="radio"
+                    value="masculino"
+                  />{" "}
+                  Masculino
                 </label>
                 <label>
-                  <Field name="sex" type="radio" value="feminino" /> Feminino
+                  <Field
+                    name="sex"
+                    component="input"
+                    type="radio"
+                    value="feminino"
+                  />{" "}
+                  Feminino
                 </label>
               </div>
             </div>
@@ -48,7 +60,7 @@ const FormEmployees = props => {
             <div className="employer-group">
               <label>CPF</label>
               <Field
-                name="cpf"
+                name="cpfEmployer"
                 component="input"
                 type="text"
                 className="employer-control"
@@ -57,7 +69,7 @@ const FormEmployees = props => {
             <div className="employer-group">
               <label>Data de Nascimento</label>
               <Field
-                name="birth-date"
+                name="birthDate"
                 component="input"
                 type="text"
                 className="employer-control"
@@ -77,7 +89,7 @@ const FormEmployees = props => {
             <div className="employer-group">
               <label>Cargo</label>
               <Field
-                name="Office"
+                name="office"
                 component="input"
                 type="text"
                 className="employer-control"
@@ -106,7 +118,7 @@ const FormEmployees = props => {
               <div className="employer-group">
                 <label>Selecione a atividade</label>
                 <Field
-                  name="activityExercised"
+                  name="activity"
                   component="select"
                   type="text"
                   className="employer-control"
@@ -137,7 +149,7 @@ const FormEmployees = props => {
               <div className="employer-group">
                 <label>Informe o número do CA</label>
                 <Field
-                  name="Office"
+                  name="caNum"
                   component="input"
                   type="text"
                   className="employer-control"
@@ -159,7 +171,7 @@ const FormEmployees = props => {
             <div className="employer-group">
               <label>Adicione Atestado de Saúde Ocupacional (opcional)</label>
               <Field
-                name="HealthCertificate"
+                name="healthCertificate"
                 component="input"
                 type="file"
                 className="employer-control"
@@ -171,7 +183,7 @@ const FormEmployees = props => {
           <button
             type="submit"
             className="submit-form"
-            diabled={pristine || submitting}
+            disabled={pristine || submitting}
             block
           >
             Salvar
