@@ -9,10 +9,11 @@ class HeaderProgress extends Component {
           <img src={Building} alt=""></img>
         </div>
         <p>ITEM 1</p>
-        <p class="item-completed">CONCLUIDO</p>
+        <p class="item-completed item-hidden">CONCLUIDO</p>
       </div>
     );
   }
+
   render() {
     let squares = [];
     for (let i = 1; i <= 9; i++) {

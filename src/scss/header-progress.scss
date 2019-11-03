@@ -39,6 +39,12 @@
       text-align: center;
       padding: 5px 0;
     }
+
+    .item-completed {
+      &.item-hidden {
+        display: none;
+      }
+    }
   }
 
   .horizontal-line {

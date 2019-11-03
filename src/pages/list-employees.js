@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import { Button } from "antd";
+import { Link } from "react-router-dom";
 
 class ListEmployees extends Component {
   state = {
     api: [],
     showAll: true,
-    itemAll: []
+    itemAll: [],
+    itemCompleted: true
   };
 
   // JSON Request
@@ -52,6 +54,8 @@ class ListEmployees extends Component {
     this.setState({ itemAll: this.state.api });
   }
 
+  // Chekbox from step completed
+
   render() {
     return (
       <React.Fragment>
@@ -61,9 +65,11 @@ class ListEmployees extends Component {
           </header>
           <content>
             <div className="action-buttons">
-              <Button className="add-employees" block>
-                + Adicionar Funcionário
-              </Button>
+              <Link to="/adicionar-funcionario">
+                <Button className="add-employees" block>
+                  + Adicionar Funcionário
+                </Button>
+              </Link>
               <Button
                 className="only-actives"
                 onClick={this.showActives.bind(this)}
@@ -92,6 +98,7 @@ class ListEmployees extends Component {
                   id="switch-shadow"
                   class="switch switch-shadow"
                   type="checkbox"
+                  name="itemCompleted"
                 />
                 <label for="switch-shadow"></label>
               </div>
