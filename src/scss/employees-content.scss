@@ -1,4 +1,4 @@
-.list-employess {
+.employees-content {
   background-color: $white;
   margin-left: 41px;
   width: 762px;
@@ -6,9 +6,21 @@
   box-shadow: 0 2px 23px $black-shadow;
   overflow: hidden;
 
-  .header-list {
+  .header-employees {
     background-color: $fountain-blue;
     padding: 12px 0 11px 20px;
+    display: flex;
+
+    a {
+      height: 25px;
+      width: 35px;
+      padding-top: 3px;
+
+      svg {
+        fill: white;
+        font-size: 25px;
+      }
+    }
 
     h2 {
       color: $white;
@@ -178,6 +190,19 @@
     .switch-shadow:checked + label:before {
       content: "Sim";
       padding-left: 3px;
+    }
+  }
+
+  // Styles for form
+
+  .ant-form {
+    .form-group {
+      border: 1px solid $fountain-blue;
+      box-sizing: border-box;
+      box-shadow: 0 4px 4px $black-shadow-squares;
+      border-radius: 10px;
+      margin: 13px 18px 13px 16px;
+      padding: 8px 12px 12px 12px;
     }
   }
 }

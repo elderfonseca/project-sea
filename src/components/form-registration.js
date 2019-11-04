@@ -2,12 +2,17 @@ import React from "react";
 import { Field, reduxForm } from "redux-form";
 import { Form, Button } from "antd";
 
+/*reduxForm({
+  form: "form",
+  fields: ["name", "sex", "cpfEmployer", "birthDate", "rg", "office", "useEpi", "activity", "epiType", "caNum", "healthCertificate"],
+})*/
+
 const FormEmployees = props => {
   const { handleSubmit, pristine, submitting } = props;
   return (
     <React.Fragment>
       <Form layout="vertical" onSubmit={handleSubmit}>
-        <div className="active-group">
+        <div className="active-group form-group">
           <div className="label-active-employer">
             <p>O trabalhador está ativo ou inativo?</p>
           </div>
@@ -21,7 +26,7 @@ const FormEmployees = props => {
             <label for="switch-shadow"></label>
           </div>
         </div>
-        <div className="employer-dates">
+        <div className="employer-dates form-group">
           <div className="employer-row">
             <div className="employer-group">
               <label>Nome</label>
@@ -97,7 +102,7 @@ const FormEmployees = props => {
             </div>
           </div>
         </div>
-        <div className="employer-epi">
+        <div className="employer-epi form-group">
           <div className="employer-row">
             <div className="employer-group">
               <label>Quais EPIs o trabalhador usa na atividade?</label>
@@ -166,7 +171,7 @@ const FormEmployees = props => {
             </Button>
           </div>
         </div>
-        <div className="employer-certificate">
+        <div className="employer-certificate form-group">
           <div className="employer-row">
             <div className="employer-group">
               <label>Adicione Atestado de Saúde Ocupacional (opcional)</label>

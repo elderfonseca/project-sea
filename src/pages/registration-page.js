@@ -3,6 +3,7 @@ import FormEmployees from "./../components/form-registration";
 import { reset } from "redux-form";
 import { connect } from "react-redux";
 import { registrationSent } from "../modules/Registration";
+import { Link } from "react-router-dom";
 import { Icon } from "antd";
 
 class RegistrationPage extends Component {
@@ -12,17 +13,16 @@ class RegistrationPage extends Component {
   };
 
   render() {
-    const { data } = this.props;
-
     return (
       <React.Fragment>
-        <div className="employer-register">
-          <header className="header-register">
-            <Icon type="arrow-left" />
+        <div className="employer-register employees-content">
+          <header className="header-register header-employees">
+            <Link to="/">
+              <Icon type="arrow-left" />
+            </Link>
             <h2>Adicionar Funcionário</h2>
           </header>
           <FormEmployees onSubmit={this.handleSubmit} />
-          <div>Form data: {data ? JSON.stringify(data) : null}</div>
         </div>
       </React.Fragment>
     );

@@ -59,8 +59,8 @@ class ListEmployees extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="list-employess">
-          <header className="header-list">
+        <div className="list-employess employees-content">
+          <header className="header-list header-employees">
             <h2>Funcionário(s)</h2>
           </header>
           <content>

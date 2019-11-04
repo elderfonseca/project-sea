@@ -1,34 +1,34 @@
 {
-    "funcionarios": [
-        {
-            "id": 1,
-            "name": "Daniel Alves da Silva",
-            "sexo": "masculino",
-            "cpfEmployer": "000.000.000-99",
-            "birthDate": "10/10/1988",
-            "rg": "5123486",
-            "activity": "Ativ 00",
-            "office": "Cargo 1",
-            "useEpi": "no",
-            "epiType": "",
-            "caNum": "",
-            "healthCertificate": "",
-            "isActive": 0
-        },
-        {
-            "id": 2,
-            "name": "Giselle Torres Lopes",
-            "sexo": "feminino",
-            "cpfEmployer": "000.000.000-88",
-            "birthDate": "10/10/1988",
-            "rg": "8426759",
-            "activity": "Ativ 00",
-            "office": "Cargo 2",
-            "useEpi": "no",
-            "epiType": "",
-            "caNum": "",
-            "healthCertificate": "",
-            "isActive": 1
-        }
-    ]
+  "funcionarios": [
+    {
+      "id": 1,
+      "name": "Daniel Alves da Silva",
+      "sexo": "masculino",
+      "cpfEmployer": "000.000.000-99",
+      "birthDate": "10/10/1988",
+      "rg": "5123486",
+      "activity": "Ativ 00",
+      "office": "Cargo 1",
+      "useEpi": "no",
+      "epiType": "",
+      "caNum": "",
+      "healthCertificate": "",
+      "isActive": 0
+    },
+    {
+      "id": 2,
+      "name": "Giselle Torres Lopes",
+      "sexo": "feminino",
+      "cpfEmployer": "000.000.000-88",
+      "birthDate": "10/10/1988",
+      "rg": "8426759",
+      "activity": "Ativ 00",
+      "office": "Cargo 2",
+      "useEpi": "no",
+      "epiType": "",
+      "caNum": "",
+      "healthCertificate": "",
+      "isActive": 1
+    }
+  ]
 }
