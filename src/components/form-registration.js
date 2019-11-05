@@ -1,11 +1,32 @@
 import React from "react";
 import { Field, reduxForm } from "redux-form";
 import { Form, Button } from "antd";
+import { createTextMask } from "redux-form-input-masks";
+import DateTimePicker from "react-widgets/lib/DateTimePicker";
+import moment from "moment";
+import momentLocaliser from "react-widgets-moment";
+
+import "react-widgets/dist/css/react-widgets.css";
+
+momentLocaliser(moment);
 
 /*reduxForm({
   form: "form",
   fields: ["name", "sex", "cpfEmployer", "birthDate", "rg", "office", "useEpi", "activity", "epiType", "caNum", "healthCertificate"],
 })*/
+
+const cpfMask = createTextMask({
+  pattern: "999.999.999-99"
+});
+
+const renderDateTimePicker = ({ input: { onChange, value }, showTime }) => (
+  <DateTimePicker
+    onChange={onChange}
+    format="DD/MM/YYYY"
+    time={showTime}
+    value={!value ? null : new Date(value)}
+  />
+);
 
 const FormEmployees = props => {
   const { handleSubmit, pristine, submitting } = props;
@@ -16,14 +37,14 @@ const FormEmployees = props => {
           <div className="label-active-employer">
             <p>O trabalhador está ativo ou inativo?</p>
           </div>
-          <div class="switch-active-employer">
+          <div className="switch-active-employer">
             <input
               id="switch-shadow"
               className="switch switch-shadow"
               type="checkbox"
               name="activeEmployer"
             />
-            <label for="switch-shadow"></label>
+            <label htmlFor="switch-shadow"></label>
           </div>
         </div>
         <div className="employer-dates form-group">
@@ -69,15 +90,17 @@ const FormEmployees = props => {
                 component="input"
                 type="text"
                 className="employer-control"
+                {...cpfMask}
               />
             </div>
             <div className="employer-group">
               <label>Data de Nascimento</label>
               <Field
                 name="birthDate"
-                component="input"
                 type="text"
                 className="employer-control"
+                showTime={false}
+                component={renderDateTimePicker}
               />
             </div>
           </div>

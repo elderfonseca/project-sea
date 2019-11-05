@@ -4,12 +4,12 @@ import Building from "../img/building.svg";
 class HeaderProgress extends Component {
   renderSquare(square) {
     return (
-      <div className="progress-group">
+      <div className="progress-group" key={square}>
         <div id={"square-" + square} className="square-progress">
           <img src={Building} alt=""></img>
         </div>
         <p>ITEM 1</p>
-        <p class="item-completed item-hidden">CONCLUIDO</p>
+        <p className="item-completed item-hidden">CONCLUIDO</p>
       </div>
     );
   }

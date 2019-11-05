@@ -26,7 +26,7 @@ class ListEmployees extends Component {
   showItem(employer) {
     if (this.state.showAll) {
       return (
-        <li>
+        <li key={employer.id}>
           <div className="personal-data">
             <h3 className="name-employer">{employer.name}</h3>
             <div className="break"></div>
@@ -90,17 +90,17 @@ class ListEmployees extends Component {
               {this.state.itemAll.map(employer => this.showItem(employer))}
             </ul>
             <div className="step-completed">
-              <div class="label-completed">
+              <div className="label-completed">
                 <p>A etapa está concluída?</p>
               </div>
-              <div class="switch-completed">
+              <div className="switch-completed">
                 <input
                   id="switch-shadow"
-                  class="switch switch-shadow"
+                  className="switch switch-shadow"
                   type="checkbox"
                   name="itemCompleted"
                 />
-                <label for="switch-shadow"></label>
+                <label htmlFor="switch-shadow"></label>
               </div>
             </div>
           </content>
