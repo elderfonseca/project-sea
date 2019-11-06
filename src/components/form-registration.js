@@ -212,7 +212,6 @@ const FormEmployees = props => {
             type="submit"
             className="submit-form"
             disabled={pristine || submitting}
-            block
           >
             Salvar
           </button>

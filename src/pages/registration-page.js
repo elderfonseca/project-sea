@@ -29,4 +29,6 @@ class RegistrationPage extends Component {
   }
 }
 
-export default connect(state => state.RegistratioPage)(RegistrationPage);
+export default connect(state => {
+  return { todos: state.RegistratioPage };
+})(RegistrationPage);
