@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import { Button } from "antd";
+import { Link } from "react-router-dom";
 
 class ListEmployees extends Component {
   state = {
     api: [],
     showAll: true,
-    itemAll: []
+    itemAll: [],
+    itemCompleted: true
   };
 
   // JSON Request
@@ -24,7 +26,7 @@ class ListEmployees extends Component {
   showItem(employer) {
     if (this.state.showAll) {
       return (
-        <li>
+        <li key={employer.id}>
           <div className="personal-data">
             <h3 className="name-employer">{employer.name}</h3>
             <div className="break"></div>
@@ -52,18 +54,22 @@ class ListEmployees extends Component {
     this.setState({ itemAll: this.state.api });
   }
 
+  // Chekbox from step completed
+
   render() {
     return (
       <React.Fragment>
-        <div className="list-employess">
-          <header className="header-list">
+        <div className="list-employess employees-content">
+          <header className="header-list header-employees">
             <h2>Funcionário(s)</h2>
           </header>
           <content>
             <div className="action-buttons">
-              <Button className="add-employees" block>
-                + Adicionar Funcionário
-              </Button>
+              <Link to="/adicionar-funcionario">
+                <Button className="add-employees" block>
+                  + Adicionar Funcionário
+                </Button>
+              </Link>
               <Button
                 className="only-actives"
                 onClick={this.showActives.bind(this)}
@@ -84,16 +90,17 @@ class ListEmployees extends Component {
               {this.state.itemAll.map(employer => this.showItem(employer))}
             </ul>
             <div className="step-completed">
-              <div class="label-completed">
+              <div className="label-completed">
                 <p>A etapa está concluída?</p>
               </div>
-              <div class="switch-completed">
+              <div className="switch-completed">
                 <input
                   id="switch-shadow"
-                  class="switch switch-shadow"
+                  className="switch switch-shadow"
                   type="checkbox"
+                  name="itemCompleted"
                 />
-                <label for="switch-shadow"></label>
+                <label htmlFor="switch-shadow"></label>
               </div>
             </div>
           </content>
