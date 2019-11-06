@@ -203,6 +203,7 @@ const FormEmployees = props => {
                 component="input"
                 type="file"
                 className="employer-control"
+                disabled
               />
             </div>
           </div>
